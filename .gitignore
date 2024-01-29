@@ -1,7 +1,8 @@
 # compiled output
 /dist
 /node_modules
-
+/database/pgdata
+/database/backup
 # Logs
 logs
 *.log

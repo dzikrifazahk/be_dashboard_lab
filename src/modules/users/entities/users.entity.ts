@@ -24,7 +24,7 @@ export class UsersEntity {
     fullname: string;
 
     @Column({
-        name: 'aliasName',
+        name: 'alias_name',
         type: 'varchar',
     })
     aliasName: string;

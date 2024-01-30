@@ -5,6 +5,7 @@ import { UsersModule } from './modules/users/users.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { dataSourceOpt } from 'database/data-source';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PatientsModule } from './modules/patients/patients.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     }),
     UsersModule,
     AuthModule,
+    PatientsModule
   ],
   controllers: [AppController],
   providers: [AppService],

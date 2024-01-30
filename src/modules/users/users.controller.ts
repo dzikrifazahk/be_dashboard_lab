@@ -3,11 +3,8 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
-  BadRequestException,
-  Injectable,
   Put,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
@@ -56,7 +53,7 @@ export class UsersController {
   })
   async findOne(@Param('id') id: string) {
     const findOne = await this.usersService.findOne(id);
-    return findOne;
+    return new BaseDto('Get User Successfully!', findOne);
   }
 
   @Put(':id')

@@ -1,0 +1,7 @@
+export enum ResultType {
+    NUMERIC = 'NUMERIC',
+    LIMITATION = 'LIMITATION',
+    ALPHANUMERIC = 'ALPHANUMERIC',
+    FREETEXT = 'FREETEXT',
+    MEMO = 'MEMO'
+}

@@ -1,7 +1,8 @@
+import { CommonColumn } from "src/common/column/common-column";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('parameters')
-export class Parameter {
+export class ParameterEntity extends CommonColumn {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -22,4 +23,10 @@ export class Parameter {
         type: 'varchar'
     })
     aliasCode: string;
+
+    @Column({
+        name: 'type',
+        type: 'varchar'
+    })
+    type: string;
 }

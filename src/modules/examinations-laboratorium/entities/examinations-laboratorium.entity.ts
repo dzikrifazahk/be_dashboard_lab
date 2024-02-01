@@ -1,7 +1,8 @@
+import { CommonColumn } from 'src/common/column/common-column';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('examinations_laboratorium')
-export class ExaminationsLaboratoriumEntity {
+export class ExaminationsLaboratoriumEntity extends CommonColumn {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -55,9 +56,9 @@ export class ExaminationsLaboratoriumEntity {
 
   @Column({
     name: 'value',
-    type: 'text',
+    type: 'varchar',
   })
-  value: Text;
+  value: string;
 
   @Column({
     name: 'reference_value',
@@ -130,5 +131,5 @@ export class ExaminationsLaboratoriumEntity {
     type: 'varchar',
   })
   parent_id: string;
-  
+
 }

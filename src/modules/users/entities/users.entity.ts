@@ -1,7 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { CommonColumn } from "src/common/column/common-column";
+import { RegistrationEntity } from "src/modules/registrations/entities/registration.entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('users')
-export class UsersEntity {
+export class UsersEntity extends CommonColumn {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -48,4 +50,6 @@ export class UsersEntity {
     })
     needChangePassword: boolean;
     
+    @OneToMany(() => RegistrationEntity, (reg) => reg.user)
+    registration: RegistrationEntity[];
 }

@@ -1,3 +1,4 @@
+import { CommonColumn } from 'src/common/column/common-column';
 import { PatientEntity } from 'src/modules/patients/entities/patient.entity';
 import { RegistrationEntity } from 'src/modules/registrations/entities/registration.entity';
 import {
@@ -9,7 +10,7 @@ import {
 } from 'typeorm';
 
 @Entity('patients_diagnose')
-export class PatientsDiagnoseEntity {
+export class PatientsDiagnoseEntity extends CommonColumn {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
